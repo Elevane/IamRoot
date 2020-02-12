@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/', 'WelcomeController@index');
+
+
+Route::group(['middleware' => 'ip'], function(){
+
+    Route::get('salut', function (){
+        return 'salut ';
+    });
 });
+
+Route::get('a-propos', 'PageController@about');
