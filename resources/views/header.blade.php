@@ -10,10 +10,10 @@
                 <a href="/home">Home</a>
             </li>
             <li>
-                <a>Plans</a>
+                <a href="/plans">Plans</a>
             </li>
             <li>
-                <a>About-Us</a>
+                <a href="/about">About-Us</a>
             </li>
             <li>
                 <a href="/contact">Contact Us</a>

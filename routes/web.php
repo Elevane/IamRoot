@@ -15,13 +15,8 @@
 Route::get('/', 'WebsiteController@indexAction');
 Route::get('/home', 'WebsiteController@indexAction');
 Route::get('/contact', 'WebsiteController@contactAction');
+Route::get('/plans', 'WebsiteController@plansAction');
+Route::get('/about', 'WebsiteController@aboutAction');
 
 
-Route::group(['middleware' => 'ip'], function(){
 
-    Route::get('salut', function (){
-        return 'salut ';
-    });
-});
-
-Route::get('a-propos', 'PageController@about');

@@ -21,4 +21,20 @@ class WebsiteController extends Controller
 
         return view('contact');
     }
+
+    /**
+     * about page
+     */
+    public function aboutAction(){
+
+        return view('about');
+    }
+
+    /**
+     * Plans page
+     */
+    public function plansAction(){
+
+        return view('about');
+    }
 }
