@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('body')
-<header></header>
+    <header></header>
     <section></section>
     <footer></footer>
 @show
