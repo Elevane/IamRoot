@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IamRoot</title>
 
-    <link href="../css/main.css">
-    <link href="../css/bootstrap.min.css">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <!--<link href="../css/bootstrap.min.css"> -->
 </head>
-    <body >
-    <!--Header-->
-    @include('header')
-    <!--content loaded from the section-->
-    @yield('content')
-    <!--Footer-->
-    @include('footer')
-    <script src="../js/bootstrap.js"></script>
+    <body>
+      <!--Header-->
+      @include('header')
+      <!--content loaded from the section-->
+      @yield('content')
+      <!--Footer-->
+      @include('footer')
     </body>
 </html>

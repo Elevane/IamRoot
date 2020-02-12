@@ -21,4 +21,5 @@
                 <img src="{{ URL::to('/') }}/images/reddit.png" alt="github_icon">
             </a>
         </li>
-    </ul></footer>
+    </ul>
+</footer>

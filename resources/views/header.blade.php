@@ -2,7 +2,7 @@
     <!-- Section Header - Contains IamRoot image and navigation menu-->
     <header>
         <!--The Logo of the website-->
-        <img src="{{ URL::to('/') }}/images/iamroot.png" alt="github_icon">
+        <a href="/"><img src="{{ URL::to('/') }}/images/iamroot.png" alt="github_icon"></a>
         <!-- The side Menu-->
     <nav>
         <ul>
@@ -24,5 +24,3 @@
         </ul>
     </nav>
     </header>
-
-
