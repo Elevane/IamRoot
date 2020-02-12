@@ -10,15 +10,15 @@ class WebsiteController extends Controller
      * Index method
      *
      */
-    public function index(){
-        return view('index');
+    public function indexAction(){
+        return view('home');
     }
 
     /**
      * Contact form controller
      */
-    public function contactFormController(){
+    public function contactAction(){
 
-
+        return view('contact');
     }
 }

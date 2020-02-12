@@ -8,8 +8,13 @@
     <link href="../css/main.css">
     <link href="../css/bootstrap.min.css">
 </head>
-    <body>
+    <body >
+    <!--Header-->
+    @include('header')
+    <!--content loaded from the section-->
+    @yield('content')
+    <!--Footer-->
+    @include('footer')
     <script src="../js/bootstrap.js"></script>
-
     </body>
 </html>

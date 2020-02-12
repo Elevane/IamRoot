@@ -13,7 +13,8 @@
 
 
 
-Route::get('/', 'WebsiteController@index');
+Route::get('/', 'WebsiteController@indexAction');
+Route::get('/contact', 'WebsiteController@contactAction');
 
 
 Route::group(['middleware' => 'ip'], function(){
