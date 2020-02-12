@@ -13,7 +13,7 @@
 
 
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'WebsiteController@index');
 
 
 Route::group(['middleware' => 'ip'], function(){
