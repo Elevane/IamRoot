@@ -7,7 +7,7 @@
     <nav>
         <ul>
             <li>
-                <a>The Project</a>
+                <a href="/home">Home</a>
             </li>
             <li>
                 <a>Plans</a>
@@ -16,7 +16,7 @@
                 <a>About-Us</a>
             </li>
             <li>
-                <a>Contact Us</a>
+                <a href="/contact">Contact Us</a>
             </li>
             <li>
                 <a href="#"> . . .</a>

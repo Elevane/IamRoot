@@ -12,8 +12,8 @@
 */
 
 
-
 Route::get('/', 'WebsiteController@indexAction');
+Route::get('/home', 'WebsiteController@indexAction');
 Route::get('/contact', 'WebsiteController@contactAction');
 
 
