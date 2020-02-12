@@ -3,11 +3,12 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
 {
     /**
-     * Index method
+     * Index page
      *
      */
     public function indexAction(){
@@ -15,7 +16,7 @@ class WebsiteController extends Controller
     }
 
     /**
-     * Contact form controller
+     * Contact  page
      */
     public function contactAction(){
 
@@ -36,5 +37,20 @@ class WebsiteController extends Controller
     public function plansAction(){
 
         return view('about');
+    }
+
+    /**
+     * Contact  form
+     * @param Request $request
+     * @return View
+     */
+    public function contactFormAction(Request $request){
+
+        //$data = array of all input from the form
+        $data = $request->all();
+
+
+        //TODO: make an If, "if the mail is sent, return to view or go to error page
+        return view('contact');
     }
 }

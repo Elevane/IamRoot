@@ -4,7 +4,7 @@
 
     <section>
         <h1>IamRoot</h1>
-        <form>
+        <form action="/contact/form/{$request}" method="GET">
             <label for="lastname">Lastname</label>
             <input type="text" id="lastname" name="lastname">
             <label for="firstname">Firstname</label>
@@ -16,5 +16,8 @@
             <label for="submit"></label>
             <input type="submit" id="submit" name="submit">
         </form>
-    </section>
+
+        <div>
+</div>
+</section>
 @endsection
