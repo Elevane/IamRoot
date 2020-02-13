@@ -2,22 +2,22 @@
 <footer>
     <ul>
         <li>
-            <a href="#">
+            <a href="www.github.com"  target="_blank">
                 <img src="{{ URL::to('/') }}/images/github.png" alt="github_icon">
             </a>
         </li>
         <li>
-            <a>
+            <a href="www.twitter.com" target="_blank">
                 <img src="{{ URL::to('/') }}/images/twitter.png" alt="github_icon">
             </a>
         </li>
         <li>
-            <a>
+            <a href="www.facebook.com" target="_blank">
                 <img src="{{ URL::to('/') }}/images/facebook.png" alt="github_icon">
             </a>
         </li>
         <li>
-            <a>
+            <a href="www.reedit.com" target="_blank">
                 <img src="{{ URL::to('/') }}/images/reddit.png" alt="github_icon">
             </a>
         </li>
