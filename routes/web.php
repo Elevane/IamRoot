@@ -22,6 +22,8 @@ Route::get('/plans', 'WebsiteController@plansAction');
 
 Route::get('/about', 'WebsiteController@aboutAction');
 
+Route::get('/tutorials', 'WebsiteController@tutorialsAction');
+
 Route::get('/contact/form/{$request}', 'WebsiteController@contactFormAction');
 
 

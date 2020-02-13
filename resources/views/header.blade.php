@@ -19,6 +19,9 @@
                 <a href="/contact">Contact Us</a>
             </li>
             <li>
+                <a href="/tutorials">Laravel</a>
+            </li>
+            <li>
                 <a href="#"> . . .</a>
             </li>
         </ul>

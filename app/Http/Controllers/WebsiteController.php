@@ -40,6 +40,13 @@ class WebsiteController extends Controller
 
         return view('plans');
     }
+    /**
+     * tutorials page
+     */
+    public function tutorialsAction(){
+
+        return view('laravel');
+    }
 
     /**
      * Contact  form
