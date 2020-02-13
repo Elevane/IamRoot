@@ -1,15 +1,14 @@
+
+<!--Body of the validation email-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
 </head>
 <body>
-<h2>Prise de contact sur mon beau site</h2>
-<p>Réception d'une prise de contact avec les éléments suivants :</p>
-<ul>
-    <li><strong>Nom</strong> : {{ $contact['lastname'] }}</li>
-    <li><strong>Email</strong> : {{ $contact['firstname'] }}</li>
-    <li><strong>Message</strong> : {{ $contact['message'] }}</li>
-</ul>
+<h2>Dear  {{ $contact['lastname'] }}</h2>
+<p>We inform you that we recieved your tickets and we will answers as fast as possible. </p>
+<p>Your devoted teams,</p>
+<p> IamRoot</p>
 </body>
 </html>

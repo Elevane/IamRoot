@@ -17,7 +17,8 @@
             <input type="submit" id="submit" name="submit">
         </form>
 
-        <div>
-</div>
+
 </section>
+
+
 @endsection

@@ -43,21 +43,22 @@ class WebsiteController extends Controller
 
     /**
      * Contact  form
+     *
+     * Get the data from the form and send an email to the
+     * customer in order to validate  we recevied the demand
      * @param Request $request
-     * @return View
+     * @return view
      */
     public function contactFormAction(Request $request){
 
-        //$data = array of all input from the form
         $email = $request->get('email');
-
         if($email){
             Mail::to($email)
                 ->send(new Contact($request->all()));
 
             return view('contact');
         }else{
-            
+
             return view('home');
         }
 
