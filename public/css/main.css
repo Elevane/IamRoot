@@ -4,7 +4,6 @@ ul {
 }
 
 li {
-  display: inline-block;
   margin: 0px 10px;
 }
 
@@ -31,39 +30,46 @@ html body #contact {
   border: 1px solid white;
 }
 
+html body #contact:hover {
+  border: none;
+  background-color: White;
+  color: #303030;
+  transition: background-color 500ms ease;
+}
+
 html body header {
   height: 400px;
 }
 
-html body header a {
+html body header #title {
   position: absolute;
   top: 20px;
   left: 0px;
   right: 0px;
 }
 
-html body header a img {
+html body header #title img {
   width: 250px;
 }
 
 html body header nav {
   display: flex;
   flex-direction: row-reverse;
+  height: 50px;
 }
 
 html body header nav ul {
-  position: relative;
-  right: 20px;
-  top: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
 html body header nav ul li {
   font-weight: bold;
   text-transform: uppercase;
+  list-style: none;
 }
 
 html body header nav ul li a {
-  position: static;
   color: white;
   text-decoration: none;
 }
@@ -73,6 +79,7 @@ html body header nav ul li:hover {
 }
 
 html body section {
+  flex-direction: column;
   flex-grow: 1;
 }
 
@@ -80,6 +87,16 @@ html body section input,
 html body section textarea {
   display: block;
   margin: 10px auto;
+}
+
+html body footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+html body footer ul li {
+  list-style: none;
 }
 
 html body footer img {
