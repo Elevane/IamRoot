@@ -12,7 +12,7 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email">
             <label for="message">Message</label>
-            <input type="text" id="email" name="email">
+            <input type="text" id="message" name="message">
             <label for="submit"></label>
             <input type="submit" id="submit" name="submit">
         </form>

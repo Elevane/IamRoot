@@ -3,7 +3,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class WebsiteController extends Controller
 {
@@ -47,10 +49,20 @@ class WebsiteController extends Controller
     public function contactFormAction(Request $request){
 
         //$data = array of all input from the form
-        $data = $request->all();
+        $email = $request->get('email');
+
+        if($email){
+            Mail::to($email)
+                ->send(new Contact($request->all()));
+
+            return view('contact');
+        }else{
+            
+            return view('home');
+        }
 
 
-        //TODO: make an If, "if the mail is sent, return to view or go to error page
-        return view('contact');
+
+
     }
 }
