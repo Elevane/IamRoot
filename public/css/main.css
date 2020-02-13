@@ -1,3 +1,8 @@
+ul {
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
 li {
   display: inline-block;
   margin: 0px 10px;
@@ -10,6 +15,9 @@ html {
 }
 
 html body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #303030;
   color: white;
   text-align: center;
@@ -40,7 +48,6 @@ html body header a img {
 
 html body header nav {
   display: flex;
-  vertical-align: top;
   flex-direction: row-reverse;
 }
 
@@ -65,26 +72,17 @@ html body header nav ul li:hover {
   text-decoration: underline;
 }
 
+html body section {
+  flex-grow: 1;
+}
+
 html body section input,
 html body section textarea {
   display: block;
   margin: 10px auto;
 }
 
-html body footer {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  display: inline;
-}
-
-html body footer ul {
-  -webkit-padding-start: 0px;
-          padding-inline-start: 0px;
-}
-
-html body footer ul img {
+html body footer img {
   width: 50px;
   border: solid 2px white;
   border-radius: 30px;
