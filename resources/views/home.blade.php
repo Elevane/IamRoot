@@ -3,8 +3,7 @@
 @section('content')
 
     <section>
-        <h2>Tutoriels et formations
-            Laravel à la carte</h2>
-        <a id="contact" href="/contact">Contactez-Nous</a>
+        <h2>Trainings ans tutorials a la carte</h2>
+        <a id="contact" href="/contact">Contact-Us</a>
     </section>
 @endsection
