@@ -11,7 +11,11 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email">
             <label for="message">Message</label>
+<<<<<<< HEAD
             <textarea name="email" id="email" rows="8" cols="80"></textarea>
+=======
+            <input type="text" id="message" name="message">
+>>>>>>> eb48cb6d7f8db84549948e94fd3ff89a0b0ae4b7
             <label for="submit"></label>
             <input type="submit" id="submit" name="submit">
         </form>
