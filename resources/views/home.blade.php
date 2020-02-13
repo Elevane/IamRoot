@@ -5,6 +5,6 @@
     <section>
         <h2>Tutoriels et formations
             Laravel à la carte</h2>
-        <a href="contact">Contactez-Nous</a>
+        <a id="contact" href="/contact">Contactez-Nous</a>
     </section>
 @endsection
