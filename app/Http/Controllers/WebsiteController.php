@@ -38,7 +38,7 @@ class WebsiteController extends Controller
      */
     public function plansAction(){
 
-        return view('about');
+        return view('plans');
     }
 
     /**

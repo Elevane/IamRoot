@@ -32,7 +32,7 @@ html body #contact {
   display: block;
   text-decoration: none;
   color: white;
-  margin: auto;
+  margin: 5px auto;
   width: 110px;
   padding: 15px;
   border: 1px solid white;
@@ -46,7 +46,7 @@ html body #contact:hover {
 }
 
 html body header {
-  height: 400px;
+  height: 350px;
   display: flex;
   justify-content: center;
 }
@@ -85,7 +85,6 @@ html body header nav ul li a {
 }
 
 html body header nav ul li:hover {
-  text-decoration: underline;
   background-color: white;
   transition: background-color 500ms ease;
 }
@@ -95,6 +94,7 @@ html body header nav ul li:hover a {
 }
 
 html body section {
+  display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
@@ -103,6 +103,30 @@ html body section input,
 html body section textarea {
   display: block;
   margin: 10px auto;
+  background-color: #303030;
+  border: solid 1px white;
+  color: white;
+}
+
+html body section #plans-sheet {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+html body section #plans-sheet div {
+  width: 300px;
+  margin: 30px;
+  border: white solid 1px;
+  padding: 20px;
+}
+
+html body section #plans-sheet div h3 {
+  border-bottom: white solid 1px;
+}
+
+html body section #plans-sheet div h4 {
+  font-size: 30px;
 }
 
 html body footer ul {
