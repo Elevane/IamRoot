@@ -41,6 +41,7 @@ iframe {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin: auto;
 }
 
 html {
@@ -176,6 +177,35 @@ html body section #plans-sheet div:hover {
 
 html body section #plans-sheet div:hover h3 {
   border-bottom: 1px #303030 solid;
+}
+
+html body section #plans-sheet .team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html body section #plans-sheet .team h3 {
+  border-bottom: 1px solid #303030;
+}
+
+html body section #plans-sheet .team:hover {
+  position: relative;
+  background-color: #303030;
+  color: white;
+  transition: background-color 500ms ease;
+}
+
+html body section #plans-sheet .team:hover img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  transition: width 250ms ease;
 }
 
 html body footer ul {
