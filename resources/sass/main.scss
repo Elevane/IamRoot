@@ -1,3 +1,8 @@
+ul
+{
+  padding-inline-start: 0px;
+}
+
 li
 {
   display: inline-block;
@@ -12,6 +17,9 @@ html
 
   body
   {
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
     background-color: #303030;
     color: white;
     text-align: center;
@@ -44,8 +52,8 @@ html
       nav
       {
         display: flex;
-        vertical-align: top;
         flex-direction: row-reverse;
+
         ul
         {
           position: relative;
@@ -74,6 +82,8 @@ html
 
     section
     {
+      flex-grow:1;
+
       input, textarea
       {
         display: block;
@@ -83,23 +93,13 @@ html
 
     footer
     {
-      position: absolute;
-      bottom: 0px;
-      left: 0px;
-      right: 0px;
-      display: inline;
-      ul
-      {
-        padding-inline-start: 0px;
 
-        img
-        {
-            width: 50px;
-            border: solid 2px white;
-            border-radius: 30px;
-        }
+      img
+      {
+          width: 50px;
+          border: solid 2px white;
+          border-radius: 30px;
       }
     }
   }
 }
-
