@@ -57,6 +57,12 @@ html body header nav ul li:hover {
   text-decoration: underline;
 }
 
+html body section input,
+html body section textarea {
+  display: block;
+  margin: 10px auto;
+}
+
 html body footer {
   position: absolute;
   bottom: 0px;
