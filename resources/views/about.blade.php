@@ -1,4 +1,7 @@
 @extends('base')
 @section('content')
-    <h1>alo in progress !</h1>
+    <section>
+        <h1>alo in progress !</h1>
+    </section>
+
 @endsection
