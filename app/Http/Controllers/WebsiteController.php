@@ -52,18 +52,15 @@ class WebsiteController extends Controller
     public function contactFormAction(Request $request){
 
         $email = $request->get('email');
-        if($email){
+        if(!empty($email)){
             Mail::to($email)
                 ->send(new Contact($request->all()));
 
             return view('contact');
         }else{
 
-            return view('home');
+            return view('contact');
         }
-
-
-
 
     }
 }
