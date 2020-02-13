@@ -2,6 +2,7 @@
 <!-- Section body - This is the main part of the website-->
 @section('content')
 
+<<<<<<< HEAD
   <section>
     <form action="/contact/form/{$request}" method="GET">
       <label for="lastname">Lastname</label>
@@ -16,6 +17,21 @@
       <input type="submit" id="submit" name="submit">
     </form>
   </section>
+=======
+    <section>
+        {{  Form::open(['url' => '/contact/form/{$request}', 'method' => 'Get'])}}
+        {{Form::token()}}
+        {{ Form::label('lastname', 'lastname')}}
+        {{Form::text('lastname')}}
+        {{ Form::label('firstname', 'firstname')}}
+        {{Form::text('firstname')}}
+        {{ Form::label('email', 'email')}}
+        {{Form::email('email')}}
+        {{ Form::label('message', 'message')}}
+        {{Form::textarea('email')}}
+        {{ Form::submit('Send') }}
+</section>
+>>>>>>> cb806e20a24a6e3fc512976c57075ebf4ea42ccb
 
 
 @endsection
