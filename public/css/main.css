@@ -127,3 +127,10 @@ html body footer img {
   border-radius: 30px;
 }
 
+input[type=submit] {
+  border: none;
+  padding: 5px;
+  background-color: #373737;
+  color: white;
+}
+
