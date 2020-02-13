@@ -18,6 +18,13 @@ li {
   margin: 0px 10px;
 }
 
+input[type=submit] {
+  border: none;
+  padding: 5px;
+  background-color: #373737;
+  color: white;
+}
+
 html {
   font-family: monospace;
   height: 100%;
@@ -52,13 +59,13 @@ html body #contact:hover {
 }
 
 html body header {
-  height: 350px;
+  height: 300px;
   display: flex;
   justify-content: center;
 }
 
 html body header img {
-  width: 250px;
+  width: 200px;
 }
 
 html body header nav {
@@ -125,14 +132,31 @@ html body section #plans-sheet div {
   margin: 30px;
   border: white solid 1px;
   padding: 20px;
+  text-align: justify;
 }
 
 html body section #plans-sheet div h3 {
   border-bottom: white solid 1px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 html body section #plans-sheet div h4 {
   font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+html body section #plans-sheet div:hover {
+  background-color: white;
+  color: #303030;
+  transition: background-color 500ms ease;
+}
+
+html body section #plans-sheet div:hover h3 {
+  border-bottom: 1px #303030 solid;
 }
 
 html body footer ul {
@@ -149,12 +173,5 @@ html body footer img {
   width: 50px;
   border: solid 2px white;
   border-radius: 30px;
-}
-
-input[type=submit] {
-  border: none;
-  padding: 5px;
-  background-color: #373737;
-  color: white;
 }
 

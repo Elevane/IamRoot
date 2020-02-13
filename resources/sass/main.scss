@@ -17,6 +17,14 @@ li
 
 }
 
+input[type=submit]
+{
+    border:none;
+    padding: 5px;
+    background-color: #373737;
+    color: white;
+}
+
 html
 {
   font-family: monospace;
@@ -54,13 +62,13 @@ html
 
     header
     {
-      height: 350px;
+      height: 300px;
       display: flex;
       justify-content: center;
 
       img
       {
-        width: 250px;
+        width: 200px;
       }
 
       nav
@@ -134,14 +142,32 @@ html
           margin: 30px;
           border: white solid 1px;
           padding: 20px;
+          text-align: justify;
           h3
           {
             border-bottom: white solid 1px;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            text-align: center;
           }
 
           h4
           {
             font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+
+        div:hover
+        {
+          background-color: white;
+          color: #303030;
+          transition: background-color 500ms ease;
+          h3
+          {
+            border-bottom: 1px #303030 solid;
           }
         }
       }
@@ -168,11 +194,4 @@ html
       }
     }
   }
-}
-
-input[type=submit]{
-    border:none;
-    padding: 5px;
-    background-color: #373737;
-    color: white;
 }
