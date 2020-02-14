@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Entities\Blog;
+use Illuminate\Support\Facades\DB;
 use function GuzzleHttp\Psr7\str;
 
 class BlogController extends Controller
@@ -71,6 +72,12 @@ class BlogController extends Controller
             }
         }
         return view('laravel.category.blog', array('id'=> $id, 'blogs' => $blogs));
+    }
+
+    public function getArticle(){
+        $blog = DB::select('select * from blog');
+
+        return view('test', ['blog' => $blog]);
     }
 
 }
