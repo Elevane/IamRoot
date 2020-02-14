@@ -26,6 +26,10 @@ Route::get('/tutorials', 'WebsiteController@tutorialsAction');
 
 Route::get('/contact/form/{$request}', 'WebsiteController@contactFormAction');
 
+Route::get('/blog', 'BlogController@index');
+
+Route::get('/blog/article/{$id]', 'BlogController@redirectToBlog');
+
 
 
 

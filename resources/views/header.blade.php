@@ -22,6 +22,9 @@
                 <a href="/tutorials">Laravel</a>
             </li>
             <li>
+                <a href="/blog">Blog</a>
+            </li>
+            <li>
                 <a href="#"> . . .</a>
             </li>
         </ul>
