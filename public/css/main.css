@@ -64,7 +64,7 @@ html body #contact {
   display: block;
   text-decoration: none;
   color: white;
-  margin: 5px auto;
+  margin: 20px auto;
   width: 110px;
   padding: 15px;
   border: 1px solid white;
@@ -180,6 +180,7 @@ html body section #plans-sheet div:hover h3 {
 }
 
 html body section #plans-sheet .team {
+  cursor: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,22 +191,8 @@ html body section #plans-sheet .team h3 {
 }
 
 html body section #plans-sheet .team:hover {
-  position: relative;
   background-color: #303030;
   color: white;
-  transition: background-color 500ms ease;
-}
-
-html body section #plans-sheet .team:hover img {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 100%;
-  border-radius: 0%;
-  transition: width 250ms ease;
 }
 
 html body footer ul {
