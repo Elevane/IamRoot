@@ -3,7 +3,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\Admin;
 use App\Mail\Contact;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -56,18 +58,28 @@ class WebsiteController extends Controller
      * @param Request $request
      * @return view
      */
-    public function contactFormAction(Request $request){
+    public function contactFormAction(Request $request)
+    {
 
         $email = $request->get('email');
-        if(!empty($email)){
+        $validator = Validator::make($request->all(), [
+            'lastname' => 'required|between:5,20|alpha',
+            'firstname' => 'required|between:5,20|alpha',
+            'email' => 'required|email|regex:^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$^',
+            'message' => 'required|max:250',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('contact')
+                ->withErrors($validator)
+                ->withInput();
+        } else {
             Mail::to($email)
                 ->send(new Contact($request->all()));
-
-            return view('contact');
-        }else{
-
+            Mail::to($email)
+                ->send(new Admin($request->all()));
             return view('contact');
         }
-
     }
+
 }
