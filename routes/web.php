@@ -28,7 +28,8 @@ Route::get('/contact/form/{$request}', 'WebsiteController@contactFormAction');
 
 Route::get('/blog', 'BlogController@index');
 
-Route::get('/blog/article/{$id]', 'BlogController@redirectToBlog');
+Route::get('/blog/article/{id}', 'BlogController@redirectToBlog');
+
 
 
 
