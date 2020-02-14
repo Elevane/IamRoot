@@ -41,6 +41,7 @@ iframe {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin: auto;
 }
 
 html {
@@ -63,7 +64,7 @@ html body #contact {
   display: block;
   text-decoration: none;
   color: white;
-  margin: 5px auto;
+  margin: 20px auto;
   width: 110px;
   padding: 15px;
   border: 1px solid white;
@@ -176,6 +177,22 @@ html body section #plans-sheet div:hover {
 
 html body section #plans-sheet div:hover h3 {
   border-bottom: 1px #303030 solid;
+}
+
+html body section #plans-sheet .team {
+  cursor: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+html body section #plans-sheet .team h3 {
+  border-bottom: 1px solid #303030;
+}
+
+html body section #plans-sheet .team:hover {
+  background-color: #303030;
+  color: white;
 }
 
 html body footer ul {

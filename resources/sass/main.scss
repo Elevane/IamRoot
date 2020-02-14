@@ -40,6 +40,7 @@ iframe{
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    margin: auto;
 }
 
 html
@@ -63,7 +64,7 @@ html
       display: block;
       text-decoration: none;
       color: white;
-      margin: 5px auto;
+      margin: 20px auto;
       width: 110px;
       padding: 15px;
       border: 1px solid white;
@@ -86,7 +87,6 @@ html
       img
       {
         width: 200px;
-
       }
 
       nav
@@ -154,16 +154,15 @@ html
         flex-direction: row;
         justify-content: center;
 
-
         div
         {
-
           cursor: pointer;
           width: 300px;
           margin: 30px;
           border: white solid 1px;
           padding: 20px;
           text-align: justify;
+
           h3
           {
             border-bottom: white solid 1px;
@@ -190,6 +189,25 @@ html
           {
             border-bottom: 1px #303030 solid;
           }
+        }
+
+        .team
+        {
+          cursor: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          h3
+          {
+            border-bottom: 1px solid #303030;
+          }
+        }
+
+        .team:hover
+        {
+          background-color: #303030;
+          color: white;
         }
       }
     }
