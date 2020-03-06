@@ -1,10 +1,11 @@
 @extends('base')
 @section('content')
     <section>
-        <h1> Category{{ $id }}</h1>
+        <h1 > Category{{ $id }}</h1>
+
         @foreach($blogs as $b)
             <article>
-                <h2>{{$b['titre']}}</h2>
+                <h2>{{$b['title']}}</h2>
                 <p>{{$b['text']}}</p>
             </article>
             @endforeach

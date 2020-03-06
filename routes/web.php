@@ -26,8 +26,6 @@ Route::get('/tutorials', 'WebsiteController@tutorialsAction');
 
 Route::get('/contact/form/{$request}', 'WebsiteController@contactFormAction');
 
-// BLog routes
-//TODO:midlleware authentification
 Route::get('/blog', 'BlogController@index');
 
 Route::get('/blog/article/{id}', 'BlogController@redirectToBlog');
@@ -35,5 +33,31 @@ Route::get('/blog/article/{id}', 'BlogController@redirectToBlog');
 Route::get('/blog/category/{id}', 'BlogController@redirectToCategory');
 
 Route::get('/test', 'BlogController@getArticle');
+
+
+
+Route::auth();
+// Authentication routes...
+Route::get('auth/login', 'Auth\LoginController@getLogin');
+Route::post('auth/login', 'Auth\LoginController@postLogin');
+Route::get('auth/logout', 'Auth\LoginController@getLogout');
+Route::get('auth/confirm/{token}', 'Auth\LoginController@getConfirm');
+
+// Resend routes...
+Route::get('auth/resend', 'Auth\LoginController@getResend');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\RegisterController@getRegister');
+Route::post('auth/register', 'Auth\RegisterController@postRegister');
+
+// Password reset link request routes...
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+// Password reset routes...
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
+
+
 
 

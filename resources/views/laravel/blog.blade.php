@@ -3,30 +3,25 @@
     <section>
         <article>
             <ul >
-                <li>
-                    <a href="/blog/article/1">article 1</a>
-                </li>
-                <li>
-                    <a href="/blog/article/2">article 2</a>
-                </li>
-                <li>
-                    <a href="/blog/article/3">article 3</a>
-                </li>
+                @foreach($blogs as $b)
+                    <li>
+                        <a href="/blog/article/{{$b['id']}}">{{$b['title']}}</a>
+                    </li>
+                @endforeach
             </ul>
         </article>
         <article>
             <ul >
-                <li>
-                    <a href="/blog/category/1">category 1</a>
-                </li>
-                <li>
-                    <a href="/blog/category/2">category 2 </a>
-                </li>
+                @foreach($category as $c)
+                    <li>
+                        <a href="/blog/category/{{$c['id']}}">{{$c['nom']}}</a>
+                    </li>
+                @endforeach
             </ul>
         </article>
         @foreach($blogs as $b)
             <article>
-                <h2>{{$b['titre']}}</h2>
+                <h2>{{$b['title']}}</h2>
                 <p>{{$b['text']}}</p>
             </article>
         @endforeach

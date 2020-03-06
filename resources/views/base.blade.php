@@ -8,6 +8,7 @@
     <!--<link href="../css/bootstrap.min.css"> -->
 </head>
     <body>
+    @guest
       <!--Header-->
       @include('header')
       <!--content loaded from the section-->
@@ -25,5 +26,6 @@
                 $('.hover_bkgr_fricc').hide();
             });
         });</script>
+      @endguest
     </body>
 </html>
