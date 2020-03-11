@@ -20,6 +20,9 @@ li {
 
 input[type=submit],
 .submit {
+  cursor: pointer;
+  display: block;
+  margin: auto;
   border: none;
   padding: 5px;
   background-color: #373737;
@@ -117,6 +120,14 @@ html body header nav ul li a {
   text-decoration: none;
 }
 
+html body header nav ul .register {
+  background-color: white;
+}
+
+html body header nav ul .register a {
+  color: #303030;
+}
+
 html body header nav ul li:hover {
   background-color: white;
   transition: background-color 500ms ease;
@@ -138,6 +149,11 @@ html body section textarea {
   margin: 10px auto;
   background-color: #303030;
   border: solid 1px white;
+  color: white;
+}
+
+html body section a {
+  margin-top: 10px;
   color: white;
 }
 
