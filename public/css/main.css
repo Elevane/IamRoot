@@ -18,7 +18,8 @@ li {
   margin: 0px 10px;
 }
 
-input[type=submit] {
+input[type=submit],
+.submit {
   border: none;
   padding: 5px;
   background-color: #373737;
