@@ -14,9 +14,10 @@ class Role extends Migration
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->string('nom');
+            $table->string('nom')->unique();
             $table->bigIncrements('id');
-            $table->integer('category');
+            $table->unsignedBigInteger('role_id')->nullable();
+            $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class Role extends Migration
      */
     public function down()
     {
-        Schema::drop('role');
+        Schema::drop('roles');
     }
 }

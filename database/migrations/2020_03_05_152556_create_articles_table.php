@@ -17,7 +17,7 @@ class CreateArticlesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('text', 900);
-            $table->integer("category");
+            $table->integer("role_id");
             $table->timestamps();
         });
     }

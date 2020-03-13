@@ -28,13 +28,14 @@ class BlogController extends Controller
 
     /**
      * article home page
+     * @param Request $request
      * @return view|Factory|\Illuminate\View\View
      */
-    public function index(){
-        $blogs = $this->repository->all();
-        $category = $this->categoryRepository->all();
+    public function index(Request $request){
 
-        return view('laravel.blog', array('blogs'=> $blogs,'category' => $category));
+        $user = Auth::user();
+        $blogs = $this->repository->getallByRole($user);
+        return view('laravel.blog', array('blogs' => $blogs));
     }
 
 

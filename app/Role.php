@@ -6,9 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    public function categories()
-    {
-        return $this->hasMany('App\Category');
-    }
+
+
+    protected $fillable = [
+        'nom', 'role_id',
+    ];
 
 }

@@ -10,6 +10,11 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+
+    public function roles()
+    {
+        return $this->hasOne('App\Role');
+    }
     /**
      * The attributes that are mass assignable.
      *

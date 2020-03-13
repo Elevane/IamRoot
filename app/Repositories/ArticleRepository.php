@@ -5,7 +5,7 @@ namespace App\Repositories;
 
 
 use App\Article;
-use App\category;
+use App\Category;
 use App\User;
 
 class ArticleRepository extends RessourceRepository
@@ -18,21 +18,21 @@ class ArticleRepository extends RessourceRepository
     {
         return Article::find($id);
     }
-    public function getByCategory($id){
-         return Article::where('category', $id)->get();
+
+
+    public function getallByRole($user){
+        $userid = $user->id;
+       $blogs = Article::all();
+        $arrayblogs = [];
+       foreach ($blogs as $b){
+           if($b['role_id'] <= $userid){
+               $arrayblogs = [$b];
+           }
+
+       }
+       
+        return $arrayblogs;
     }
 
-    /**
-     * return all blogs according to the plans/role of the user
-     * @param String $userName
-     * @return mixed
-     */
-    public function getBlogByRole(String $userName){
-        $user = User::find($userName);
-        $roles = $user->roles();
-        $category = $roles->categories();
-        $blogs = Article::where('category', $category)->get();
 
-        return $blogs;
-    }
 }
