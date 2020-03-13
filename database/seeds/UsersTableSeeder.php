@@ -72,7 +72,52 @@ class UsersTableSeeder extends Seeder
         );
 
 
-        factory(App\User::class)->create()->save();
+        factory(App\User::class)->create(
+        ['name' => 'admin',
+            'email' => 'admin@admin.fr',
+            'password'=> bcrypt('password'),
+            'role_id'=> 4]
+        )->save();
+
+        factory(App\Article::class)->create([
+            'title' => 'article base',
+            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut lorem nec massa euismod aliquet 
+            nec tincidunt enim. Vivamus ornare rutrum arcu ut aliquet. Maecenas vitae elit massa. Vivamus accumsan sit
+             amet massa eget varius. Ut eu justo pulvinar tortor sollicitudin consequat. In at orci feugiat, vulputate 
+             nibh id, egestas mauris. Morbi viverra risus ac sapien tincidunt, nec dictum erat maximus. Quisque semper
+              accumsan odio, nec convallis tortor fermentum at. Pellentesque at nibh dui.',
+            'role_id'=> 1,
+        ])->save();
+
+        factory(App\Article::class)->create([
+            'title' => 'article premium',
+            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut lorem nec massa euismod aliquet 
+            nec tincidunt enim. Vivamus ornare rutrum arcu ut aliquet. Maecenas vitae elit massa. Vivamus accumsan sit
+             amet massa eget varius. Ut eu justo pulvinar tortor sollicitudin consequat. In at orci feugiat, vulputate 
+             nibh id, egestas mauris. Morbi viverra risus ac sapien tincidunt, nec dictum erat maximus. Quisque semper
+              accumsan odio, nec convallis tortor fermentum at. Pellentesque at nibh dui.',
+            'role_id'=> 2,
+        ])->save();
+
+        factory(App\Article::class)->create([
+            'title' => 'article ultra',
+            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut lorem nec massa euismod aliquet 
+            nec tincidunt enim. Vivamus ornare rutrum arcu ut aliquet. Maecenas vitae elit massa. Vivamus accumsan sit
+             amet massa eget varius. Ut eu justo pulvinar tortor sollicitudin consequat. In at orci feugiat, vulputate 
+             nibh id, egestas mauris. Morbi viverra risus ac sapien tincidunt, nec dictum erat maximus. Quisque semper
+              accumsan odio, nec convallis tortor fermentum at. Pellentesque at nibh dui.',
+            'role_id'=> 3,
+        ])->save();
+
+        factory(App\Article::class)->create([
+            'title' => 'article admin',
+            'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut lorem nec massa euismod aliquet 
+            nec tincidunt enim. Vivamus ornare rutrum arcu ut aliquet. Maecenas vitae elit massa. Vivamus accumsan sit
+             amet massa eget varius. Ut eu justo pulvinar tortor sollicitudin consequat. In at orci feugiat, vulputate 
+             nibh id, egestas mauris. Morbi viverra risus ac sapien tincidunt, nec dictum erat maximus. Quisque semper
+              accumsan odio, nec convallis tortor fermentum at. Pellentesque at nibh dui.',
+            'role_id'=> 4,
+        ])->save();
 
     }
 }
