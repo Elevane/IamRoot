@@ -31,10 +31,9 @@ class BlogController extends Controller
      * @param Request $request
      * @return view|Factory|\Illuminate\View\View
      */
-    public function index(Request $request){
+    public function index(){
+        $blogs = $this->repository->getallByRole();
 
-        $user = Auth::user();
-        $blogs = $this->repository->getallByRole($user);
         return view('laravel.blog', array('blogs' => $blogs));
     }
 

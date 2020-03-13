@@ -20,17 +20,12 @@ class ArticleRepository extends RessourceRepository
     }
 
 
-    public function getallByRole($user){
-        $userid = $user->id;
-       $blogs = Article::all();
-        $arrayblogs = [];
-       foreach ($blogs as $b){
-           if($b['role_id'] <= $userid){
-               $arrayblogs = [$b];
-           }
+    public function getallByRole(){
+        $blogs1 = Article::all()->where('role_id', 1);
+        $blogs2 = Article::all()->where('role_id', 2);
+        $blogs3 =Article::all()->where('role_id', 3);
+        $arrayblogs = [$blogs1, $blogs2, $blogs3];
 
-       }
-       
         return $arrayblogs;
     }
 

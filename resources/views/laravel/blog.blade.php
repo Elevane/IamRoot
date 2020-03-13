@@ -3,14 +3,30 @@
     <section>
         <article>
             <ul>
-                @foreach($blogs as $b)
-                       @if($b['role_id'] == 1)
+                @foreach($blogs[0] as $b)
+                    @if(Auth::user()->role_id >= $b['role_id'])
                         <li>
-                            <a href="/blog/article/{{$b['id']}}">{{$b['title']}}</a>
+                            <h2>{{$b['title']}}</h2>
+                            <p>{{$b['text']}}</p>
                         </li>
-                        @endif
-
+                    @endif
                 @endforeach
+                    @foreach($blogs[1] as $b)
+                        @if(Auth::user()->role_id >= $b['role_id'])
+                            <li>
+                                <h2>{{$b['title']}}</h2>
+                                <p>{{$b['text']}}</p>
+                            </li>
+                        @endif
+                    @endforeach
+                    @foreach($blogs[2] as $b)
+                        @if(Auth::user()->role_id >= $b['role_id'])
+                            <li>
+                                <h2>{{$b['title']}}</h2>
+                                <p>{{$b['text']}}</p>
+                            </li>
+                        @endif
+                    @endforeach
             </ul>
         </article>
 
