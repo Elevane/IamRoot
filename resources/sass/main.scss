@@ -19,6 +19,9 @@ li
 
 input[type=submit], .submit
 {
+    cursor: pointer;
+    display: block;
+    margin: auto;
     border:none;
     padding: 5px;
     background-color: #373737;
@@ -118,6 +121,15 @@ html
             }
           }
 
+          .register
+          {
+            background-color: white;
+            a
+            {
+              color: #303030;
+            }
+          }
+
           li:hover
           {
             background-color: white;
@@ -145,6 +157,12 @@ html
         margin: 10px auto;
         background-color: #303030;
         border: solid 1px white;
+        color: white;
+      }
+
+      a
+      {
+        margin-top: 10px;
         color: white;
       }
 
