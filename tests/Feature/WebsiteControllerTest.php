@@ -38,7 +38,7 @@ class WebsiteControllerTest extends TestCase
     public function testAboutAction(){
 
         $response = $this->call('GET', '/about');
-        $this->assertTrue($response->isOk(), "l'appel de la viex à échoué");
+        $this->assertTrue($response->isOk(), "l'appel de la view à échoué");
     }
 
 
