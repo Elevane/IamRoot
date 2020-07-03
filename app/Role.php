@@ -12,7 +12,7 @@ class Role extends Model
         'name', 'role_id',
     ];
 
-}
+
 
 public function setName($name){
     $this->attributes['name'] = $name;
@@ -20,4 +20,6 @@ public function setName($name){
 
 public function getName(){
     return $this->name;
+}
+
 }
