@@ -9,7 +9,15 @@ class Role extends Model
 
 
     protected $fillable = [
-        'nom', 'role_id',
+        'name', 'role_id',
     ];
 
+}
+
+public function setName($name){
+    $this->attributes['name'] = $name;
+}
+
+public function getName(){
+    return $this->name;
 }
