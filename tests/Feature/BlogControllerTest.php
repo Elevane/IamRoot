@@ -11,13 +11,30 @@ class BlogControllerTest extends TestCase
 {
 
     /**
-     * test la méthode qui retourne la vue de l'index
+     * test si l'utilisateur peut accéder a la route
      *  @return void
      */
-    public function testBlogAction(){
+    public function testBlogAsAdminAction(){
         $user = factory(User::class)->create(['role_id' => 4]);
-
+        $this->be($user);
         $response = $this->call('GET', '/blog');
-        $this->assertTrue($response->isOk(), "l'appel de la view à échoué");
+        $this->assertTrue($response->isOk(), "l'admin devrait avoir les droits d'acces a cete route");
     }
+
+
+
+     /**
+     * test si l'user peut accéder a une route interdite
+     *  @return void
+     */
+    public function testBlogAsUserAction(){
+        $user = factory(User::class)->create(['role_id' => 1]);
+        $this->be($user);
+        $response = $this->call('GET', '/blog');
+        $this->assertTrue($response->isOk(), "l'utilisateur ne devrait pas avoit les droti d'acces a cette route");
+    }
+
+
+
+
 }
